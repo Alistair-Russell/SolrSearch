@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1>Bio</h1>
+<dl>
+    <dt>Name</dt>
+    <dd>{{ content.full_name }}</dd>
+    <dt>About</dt>
+    <dd>{{ content.first_name }}</dd>
+</dl>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% if content.results %}
+    {% for result in content.results %}
+    <div class="row">
+        <div class="search-result">
+            <p>{{ result.type }} - {{ result.id }}</p>
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+    <h5>No Results found.</h5>
+{% endif %}
+

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h1></h1>
+<table class="table">
+    <thead>
+    <tr>
+        <th>People</th>
+        <th>Snippits</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for person in content %}
+    <tr>
+        <td><a href="{{ person.url }}">{{ person.title }}</a></td>
+        <td>
+            <ul>
+                {% for snippet in person.snippets %}
+                <li><a href="{{ tag.url }}">{{ tag.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </td>
+        <td>
+            <a href="{{ snippet.creator.url }}">{{ snippet.creator.full_name }}</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
